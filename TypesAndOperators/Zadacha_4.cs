@@ -24,3 +24,21 @@
         }
     }
 }
+
+//Решение2 
+/*
+
+        int numb2;
+
+        Console.WriteLine("Введите ваше число: ");
+        numb2 = Convert.ToInt32(Console.ReadLine());
+       
+        if ((numb2 % 2) == 1) //1 это значит, что делится c остатком
+        {
+          Console.WriteLine("Число нечётное");
+        }
+        else
+        {
+    Console.WriteLine("Число чётное");
+        }
+*/
