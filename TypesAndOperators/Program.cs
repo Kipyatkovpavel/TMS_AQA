@@ -1,303 +1,272 @@
-﻿// See https://aka.ms/new-console-template for more information
-//========6 LESSON==========
-/*
-    //This message is murrr
+﻿/*int[] array = { 1, 9, 3, 6, 5 };
+///
+///
+///
+///
+///
+///
+int[] array1;
+int n = 4;
+array1 = new int[n]; //размерность можно определить только при инициализации массива, потом изменить нельзя
+int[] array2 = new int[5] { 1, 9, 3, 6, 5 };
 
-    Console.WriteLine("Hello, World!");
+//Console.WriteLine(array[4]);                       // количество всех элементов
+//array[0] = 10;
 
-        Console.WriteLine("It's a nice day!");
+Console.WriteLine($"Last item in array: {array[array.Length - 2]}");
+Console.WriteLine($"Last item in array: {array[^2]}");
+Console.WriteLine($"Last item in array: {array[array.GetUpperBound(0)]}"); //самый правильный варинт из этих трех, где указываем строку, с которой работаем
 
-        const int MINUTES_IN_HOUR = 60;
+Console.WriteLine(array[0]);
+Console.WriteLine("Length: " + array.Length);                       // количество всех элементов
+Console.WriteLine("Rank: " + array.Rank);                           // ранг массива
+Console.WriteLine("GetLength(0): " + array.GetLength(0));           // количество строк
+Console.WriteLine("GetUpperBound(0): " + array.GetUpperBound(0));   // Верхний индекс строк
+Console.WriteLine("GetUpperBound(0): " + array.GetLowerBound(0));   // Нижний индекс строк
 
-    string name;
-    name = "Martin";
-    Console.WriteLine(name);
 
-    name = "Martin2";
-    Console.WriteLine(name);
+for (int i = 0; i < array.GetLength(0) ; i++) //(объявление переменной; условие; изменение переменной)
+{
+Console.Write($"{array[i]}");
+}
 
-    //ЛИТЕРАЛЫ
-    //логические
-    Console.WriteLine(true);
-    Console.WriteLine(false);
-    //целочисленные
-    Console.WriteLine(-10);
-    Console.WriteLine(0);
-    Console.WriteLine(10);
-    Console.WriteLine(0b0100100);
-    //вещественные
-    Console.WriteLine(1.24);
-    Console.WriteLine(1.24F); //число с дробной точкой
-    //символьные (только один символ)
-    Console.WriteLine('H');
-    //null
-    //Console.WriteLine(null);
+for (int i = 0; i <= array.GetUpperBound(0) ; i++) //считается по индексу, а не по количеству элементов, поэтому <=
+{
+Console.Write($"{array[i]}");
+}
 
-    Console.WriteLine("It's a \t nice day!"); //добавляет знак табуляции
-    Console.WriteLine("It's a \n nice day!"); //перевод на новую строчку
-    Console.WriteLine("It's a \\ nice day!"); //чтобы вывести слеш, нужно поставить два
 
-    bool flag = true;
-    flag = false;
+for (int i = 0; i <= array.GetUpperBound(0) ; i++)
+{
+array[i] = new Random().Next(100);
+}
 
-    sbyte sb = 100;
+Console.WriteLine();
+foreach (int item in array) //указать тип массива, с которым мы работаем
+{
+Console.Write($"{item} ");
+}
 
-    float a = 3.14F;
-    float a1 = 3.14f;
+//for - работает с индексами при работе с массивами; позволяет менять значение элементов
+//foreach - работает с элементами массива. Можно только получить, менять нельзя
 
-    decimal c = 1005.5M;
-    decimal c1 = 1005.5m;
+for (int i = 1; i <= 10; i++) //меняет переменную на шаг, укзаанный в конце до тех пор, пока условие из середины не будет выполнено
+{
+Console.WriteLine($"{i} Hello");
+}
 
-    //неявная типизация
-    var d = 10;
-    var d1 = 10.2F;
-    var d2 = 'D';
+for (int i = 0; i <= 10; i += 2)  //вычисление чисел от нуля до 10
 
-    int j;
-    j = 20;
+{
+Console.WriteLine($"{i} ");
+}
 
-    var j1 = 20;
-    
-    Console.WriteLine("Добро пожаловать в C#");
-    Console.Write("Надеюсь, Вы ");
-    Console.Write("постигнете нюансы в C#! \n");
-    Console.WriteLine("И все будет супер гуд!");
-    
-    int j;
-    j = 20;
+Console.WriteLine();
+string text = "Hello!!!";
+foreach (char ch in text)
+{
+Console.Write($"{ch} ");
+}
 
-    Console.WriteLine("J = " + j);
+for (int i = 0; i <= 10; i += 2)  //вычисление цифр от нуля до 10, если цифра не равна 6, ничего не выводить
 
-    string name = "Tom";
-    int age = 21;
-    double height = 1.7;
-    Console.WriteLine($"Имя: {name} Возраст: {age} Рост: {height}");
-    Console.WriteLine("Имя: {0} Возраст: {2} Рост: {1}", name, height, age);
+{
+if (i != 6)
+{
 
-    string tst = "djfjf";
-    tst = null;
+}
+else
+{
+   Console.WriteLine($"{i} ");
+}
 
-    Console.WriteLine("Введите свое имечко:");
-    string? name = Console.ReadLine();
-    Console.WriteLine($"Ваше имечко: {name}");
+}
 
-    Console.WriteLine("Введите свой возраст:");
-    string? age_str = Console.ReadLine();
-    int age = Convert.ToInt32(age_str);
-    Console.WriteLine($"Ваш возраст: {age}");
+
+int u = 6;
+bool flag = true;
+
+do //цикл выполнится минимум один раз (в отличие for, который может не выполниться ни разу при соотв. условии
+{
+   if (u < 0) flag = false;
+   Console.WriteLine($"{u}");
+   u--;
+}
+while (flag);
+
+int u1 = 6;
+do
+{
+
+   Console.WriteLine($"{u1}");
+   u1--;
+}
+while (u1 >= 0);
 */
-//=============7 LESSON==================
 /*
-double x = 10.0;
-double z = x % 4;
-Console.WriteLine($"Результат: {z}");
-
-int x1 = 5;
-int z1 = ++x1;
-Console.WriteLine($"{x1} - {z1}");
-
-int a = 8;
-int b = 6;
-int c = a += b -= 5;
-Console.WriteLine(c);
-
-//Преобразование базовых типов данных
-
-byte a = 4;
-int b = a + 70;
-Console.WriteLine(b);
-
-byte a = 4;
-byte b = a + 70;
-Console.WriteLine(b); //ошибка, потому что 70 считается int
-
-
-byte a = 4;
-byte result = (byte)(a + 70);
-Console.WriteLine(result);
-
-bool c;
-int a = 10;
-int b = 20;
-c = a == b;
-Console.WriteLine(c);
-
-bool x1 = (5 > 6) | (4 < 6); //логическое сложение  (ИЛИ)
-Console.WriteLine(x1);
-
-bool x2 = (5 > 6) & (4 < 6); //логическое умножение  (И)
-Console.WriteLine(x2);
-
-bool a = true;
-bool b = !a;
-Console.WriteLine(b); //логическое отрицание
-
-if (условие)
+//-------------Двумерный массив------------
+int[,] array = new int[4, 5]; //запятая значит, что это двумерный массив - 4 строки по 5 элементов
+int[,] array1 =
 {
-}
-else
-{
-}
-*/
-
-/*
-//Решение нашей задачи
-//Подготовка данных
-bool isWhiteBreadFresh = true;
-ushort whiteBreadPrice = 150;
-ushort butterPrice = 230;
-ushort milkPrice = 170;
-float milkFatPercentage = 1.2F;
-ushort icecreamPrice = 350;
-
-Console.Write("Введите начальную сумму: ");
-string? sumString = Console.ReadLine();
-short sum = Convert.ToInt16(sumString);
-
-if (sum > 0)
-{
-    if (!isWhiteBreadFresh)
-    {
-        Console.WriteLine("Батон не свежий");
-    }
-    else if (sum >= whiteBreadPrice)
-    {
-        sum = Convert.ToInt16(sum - whiteBreadPrice);
-        Console.WriteLine($"Купили свежий батон по цене {whiteBreadPrice}");
-    }
-    else
-    {
-        Console.WriteLine("На батон денег не хватает");
-    }
-
-    sum = (short)(sum - butterPrice);
-
-    if (milkFatPercentage == 1.2F)
-    {
-        sum = Convert.ToInt16(sum - milkPrice);
-    }
-
-    if (sum >= icecreamPrice)
-    {
-        sum = Convert.ToInt16(sum - icecreamPrice);
-    }
-
-    Console.WriteLine($"Остаток суммы: {sum}");
-}
-else
-{
-    Console.WriteLine("Сумма не может быть меньше 0");
-}
-*/
-//============конец задачи про магазин=============
-
-/*
-bool a = true;
-bool b = false;
-string name1 = "Tom1";
-string name2 = "Tom2";
-
-if ( !(name1.Equals(name2) & b))
-{
-    Console.WriteLine("Верно");
-}
-else
-{
-    Console.WriteLine("Неверно");
-}
-
-
-int x = 10;
-int y = 20;
-int z;
-if (x < y)
-{
-    z = x + y;
-}
-else
-{
-    z = x - y;
-}
-Console.WriteLine(z);
-
-z = x < y ? x + y : x - y; //если первое true, то выполняет блок 2, если false, то блок 3
-Console.WriteLine(z);
-
-
-
-int x = 6;
-if (x == 1)
-{
-    Console.WriteLine("1");
-} else if (x == 2)
-{
-    Console.WriteLine("2");
-}
-else
-{
-    Console.WriteLine("не соответствует условиям");
-}
-
-switch (x)
-{
-    case 1:
-        Console.WriteLine("1");
-        break;
-    case 2:
-        Console.WriteLine("2");
-        break;
-    default: //если ни один из описанных кейсов не подошел
-        Console.WriteLine("не соответствует условиям");
-        break; //конец выполнения этого кейса
-}
-
-string name = "Tom";
-switch (name)
-{
-    case "Alex":
-        Console.WriteLine("Alex");
-        break;
-    default: //если ни один из описанных кейсов не подошел
-        Console.WriteLine("не соответствует условиям");
-        break; //конец выполнения этого кейса
-}
-
-
-//для boolean switch практически не используется, т.к. два варианта всего и нет смысла делать эту конструкцию
-
-
-Console.WriteLine(DoOperation(6));
-
-int DoOperation(int x)
-{
-    switch (x)
-    {
-        case 1:
-            return 1;
-        case 2:
-            return 2;
-        default:
-            return 0; //для этого метода всегда должен быть return, поэтому дефолтное значение обязательно
-    }
-}
-
-int DoOperation1(int x)
-{
-    int result = x switch
-    {
-        1 => 1,
-        2 => 2,
-        _ => 0
-    };
-    
-
-    return result;
-}
-
-int DoOperation2(int x) => x switch
-{
-    1 => 1,
-    2 => 2,
-    _ => 0
+    { 1, 2, 3 },
+    { 4, 5, 6 }
 };
+
+
+Console.WriteLine("Length: " + array.Length);                       // количество всех элементов
+Console.WriteLine("Rank: " + array.Rank);                           // ранг массива
+Console.WriteLine("GetLength(0): " + array.GetLength(0));           // количество строк
+Console.WriteLine("GetUpperBound(0): " + array.GetUpperBound(0));   // Верхний индекс строк
+Console.WriteLine("GetLength(1): " + array.GetLength(1));           // количество столбцов
+Console.WriteLine("GetUpperBound(1): " + array.GetUpperBound(1));   // Верхний индекс столбцов
+Console.WriteLine("GetLowerBound(0): " + array.GetLowerBound(0));   // Нижний индекс строк
+Console.WriteLine("GetLowerBound(1): " + array.GetLowerBound(1));   // Нижний индекс столбцов
+
+
+
+Console.WriteLine("=========");
+
+int t = 1;
+// Задание значений
+for (int i = 0; i < array.GetLength(0); i++) //GetLength завязан на измерения, как и Upper/LowerBound. Можно использовать или GetLength или UpperBound по желанию
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        array[i, j] = i + j;
+    }
+}
+
+int rows = array.GetLength(0);
+int columns = array.Length / rows;
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < columns; j++)
+    {
+        Console.Write($"{array[i, j]} \t");
+    }
+    Console.WriteLine();
+}
+
+
+foreach (int item in array) //нельзя изменить, но можно получить какое-то значение из массива
+{
+    Console.Write($"{item} ");
+}
+
+
+// -============================================= Трехмерный массив =============================================-
+
+int[,,] array3D = new int[,,]
+{
+    {
+        { 1, 2, 3 },
+        { 4, 5, 6 }
+    },
+    {
+        { 7, 8, 9 },
+        { 10, 11, 12 }
+    }
+};
+
+Console.WriteLine("Length: " + array3D.Length);                       // количество всех элементов
+Console.WriteLine("Rank: " + array3D.Rank);                           // ранк массива
+Console.WriteLine("GetLength(0): " + array3D.GetLength(0));           // количество строк
+Console.WriteLine("GetUpperBound(0): " + array3D.GetUpperBound(0));   // Верхний индекс строк
+Console.WriteLine("GetLength(1): " + array3D.GetLength(1));           // количество столбцов
+Console.WriteLine("GetUpperBound(1): " + array3D.GetUpperBound(1));   // Верхний индекс столбцов
+Console.WriteLine("GetLength(2): " + array3D.GetLength(2));           // количество столбцов
+Console.WriteLine("GetUpperBound(2): " + array3D.GetUpperBound(2));   // Верхний индекс столбцов
+
+Console.WriteLine("GetLowerBound(0): " + array3D.GetLowerBound(0));   // Нижний индекс строк
+Console.WriteLine("GetLowerBound(1): " + array3D.GetLowerBound(1));   // Нижний индекс столбцов
+Console.WriteLine("GetLowerBound(2): " + array3D.GetLowerBound(2));   // Нижний индекс столбцов
+
+for (int i = 0; i <= array3D.GetUpperBound(0); i++)
+{
+    Console.WriteLine($"-========= Level {i} ==========-");
+    for (int j = 0; j <= array3D.GetUpperBound(1); j++)
+    {
+        for (int k = 0; k <= array3D.GetUpperBound(2); k++)
+        {
+            Console.Write($"{array3D[i, j, k]} \t");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine($"-============================-");
+}
 */
+
+//================= Многомерный (зубчатый) массив ======================
+/*
+int[][] numbers =
+{
+    new int[] { 1, 2 },
+    new int[] { 1, 2, 3, 4, 5 },
+    new int[] { 1, 2, 3 }
+};
+
+Console.WriteLine("Length: " + numbers.Length);                       // количество всех элементов
+Console.WriteLine("Rank: " + numbers.Rank);                           // ранк массива
+Console.WriteLine("GetLength(0): " + numbers.GetLength(0));           // количество строк
+Console.WriteLine("GetLength(0): " + numbers.GetLength(0));           // количество строк
+Console.WriteLine("GetUpperBound(0): " + numbers.GetUpperBound(0));   // Верхний индекс строк
+Console.WriteLine("============================");
+
+
+foreach (int[] row in numbers)
+{
+    for (int i = 0; i < row.Length; i++)
+    {
+        row[i] = new Random().Next(100);
+    }
+}
+
+for (int i = 0; i <= numbers.GetUpperBound(0); i++)
+{
+    for (int j = 0; j <= numbers[i].GetUpperBound(0); j++)
+    {
+        Console.Write($"{numbers[i][j]} \t");
+    }
+
+    Console.WriteLine();
+}
+*/
+
+
+//===== Задача перевернуть массив =====
+
+int[] nums = { -4, 8, 10, 2, 12, 0, 5, 6 };
+
+foreach (int item in nums)
+{
+    Console.Write($"{item} \t");
+}
+
+Console.WriteLine();
+/*
+nums[0] <-> nums[nums.Length - 1 - 0]
+nums[1] <-> nums[nums.Length - 1 - 1]
+nums[2] <-> nums[nums.Length - 1 - 2]
+*/
+
+int n = nums.Length; //Длина массива
+int k = n / 2;
+int tmp;
+
+for (int i = 0; i < k; i++)
+{
+    tmp = nums[i];
+    nums[i] = nums[n - 1 - i];
+    nums[n - 1 - i] = tmp;
+}
+foreach (int item in nums)
+{
+    Console.Write($"{item} \t");
+}
+
+Array.Reverse(nums);
+
+foreach (int item in nums)
+{
+    Console.Write($"{item} \t");
+}
