@@ -12,7 +12,7 @@ namespace SecondTaskArrays
             Console.Write("Представлен массив чисел: ");
             int[] array = new int[25];
 
-            for (int i = 0; i < array.GetUpperBound(0); i++)
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
             {
                 array[i] = new Random().Next(100);
                 Console.Write($"{array[i]} ");
