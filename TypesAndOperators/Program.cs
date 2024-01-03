@@ -102,8 +102,7 @@ do
    u1--;
 }
 while (u1 >= 0);
-*/
-/*
+
 //-------------Двумерный массив------------
 int[,] array = new int[4, 5]; //запятая значит, что это двумерный массив - 4 строки по 5 элементов
 int[,] array1 =
@@ -194,10 +193,10 @@ for (int i = 0; i <= array3D.GetUpperBound(0); i++)
     }
     Console.WriteLine($"-============================-");
 }
-*/
+
 
 //================= Многомерный (зубчатый) массив ======================
-/*
+
 int[][] numbers =
 {
     new int[] { 1, 2 },
@@ -230,7 +229,7 @@ for (int i = 0; i <= numbers.GetUpperBound(0); i++)
 
     Console.WriteLine();
 }
-*/
+
 
 
 //===== Задача перевернуть массив =====
@@ -243,11 +242,11 @@ foreach (int item in nums)
 }
 
 Console.WriteLine();
-/*
+
 nums[0] <-> nums[nums.Length - 1 - 0]
 nums[1] <-> nums[nums.Length - 1 - 1]
 nums[2] <-> nums[nums.Length - 1 - 2]
-*/
+
 
 int n = nums.Length; //Длина массива
 int k = n / 2;
@@ -270,3 +269,4 @@ foreach (int item in nums)
 {
     Console.Write($"{item} \t");
 }
+*/
