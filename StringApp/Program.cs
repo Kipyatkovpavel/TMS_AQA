@@ -1,10 +1,10 @@
-﻿using System.Text.RegularExpressions;
+﻿/*using System.Text.RegularExpressions;
 
 namespace StringApp
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             /*
             string message1;
@@ -440,7 +440,7 @@ sbCapacity.Capacity = newCapacity * 2;
 // Получаем емкость после установки
 int updatedCapacity = sbCapacity.Capacity;
 Console.WriteLine($"Updated Capacity: {updatedCapacity}");
-*/
+
 
 //==================== Регулярные выражения (Regex)============
 //==================Соответствие строки регулярному выражению
@@ -508,3 +508,4 @@ Console.WriteLine($"Строка после замены: {result2}");
         }
     }
 }
+*/
