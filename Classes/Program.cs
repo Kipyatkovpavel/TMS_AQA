@@ -1,11 +1,11 @@
-﻿using Classes.Models;
+﻿global using Classes.Models;
 
 namespace Classes
 {
     class Program
     {
         static void Main(string[] args)
-            
+
         {
             /*
               int[] array = { 1, 8, 14, -4, 0, 7 };
@@ -229,6 +229,50 @@ namespace Classes
             NamespaceB.ClassA classB = new NamespaceA.ClassA();
             classA.Print();
             */
+
+            //==========    Практика    ==========
+            //==========    Задача 1    ==========
+
+            Student[] students = new Student[14];
+
+            for (int i = 0; i < 14; i++)
+            {
+                students[i] = new Student();
+                students[i].name = "Alex" + i;
+                students[i].group = new Random().Next(2);
+                students[i].diplomMark = new Random().Next(1, 11);
+            }
+            Console.WriteLine($"Students.Length: {students.Length}");
+            foreach (var student in students)
+            {
+                Console.WriteLine($"Name: {student.name}, Group: {student.group}, Mark: {student.diplomMark}");
+                Console.WriteLine();
+
+            }
+            Console.WriteLine();
+            //==========    Задача 2    ==========
+            foreach (Student student in students)
+            {
+                if (student.diplomMark == 9 || student.diplomMark == 10)
+                student.Print();
+            }
+            Console.WriteLine();
+            //==========    Задача 3    ==========
+
+            Student[] students1= new Student[14];
+            for (int i = 0; i < 14; i++) students1[i]= new Student("Alex" +i);
+            foreach (var student in students1) student.Print();
+            Console.WriteLine();
+            //==========    Задача 3    ==========
+            Cat cat = new Cat();
+            cat.name = "Barsik";
+            cat.age = 2;
+            cat.maxFoodCount = 3;
+
+            Console.WriteLine($"Наелся? - {cat.Feed(2)}");
+            Console.WriteLine($"Наелся? - {cat.Feed(4)}");
+            Console.WriteLine("Наелся? - {0}",cat.Feed(3) ? "Да" : "Нет");
         }
+
     }
 }
