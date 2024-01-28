@@ -1,6 +1,6 @@
 ﻿namespace Abstraction
 {
-    internal class Client
+    public class Client
     {
         public int Id;
         public string PhoneNumber;

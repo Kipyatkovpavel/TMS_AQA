@@ -1,4 +1,6 @@
-﻿using Abstraction;
+﻿// See https://aka.ms/new-console-template for more information
+
+using Abstraction;
 using Encapsulation;
 
 Client client1 = new Client();
