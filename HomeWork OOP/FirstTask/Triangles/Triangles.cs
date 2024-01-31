@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HomeWork_OOP.FirstTask;
 
 namespace HomeWork_OOP.FirstTask.Triangles
 {
@@ -21,8 +22,8 @@ namespace HomeWork_OOP.FirstTask.Triangles
         public override double GetArea() //Расчёт площади по формуле Герона
         {
             double P;
-            P = (lengthA + lengthB + lengthC) / 2;
-            return double.Sqrt(P * (P - lengthA) * (P - lengthB) * (P - lengthC));
+            P = (this.lengthA + this.lengthB + this.lengthC) / 2;
+            return double.Sqrt(P * (P -lengthA) * (P - lengthB) * (P - lengthC));
          
         }
 

@@ -1,9 +1,5 @@
 ﻿using HomeWork_OOP.FirstTask.Triangles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HomeWork_OOP.FirstTask
 {
@@ -14,25 +10,28 @@ namespace HomeWork_OOP.FirstTask
             //Проверка на равносторонний
             if (lengthA == lengthB && lengthB == lengthC)
             {
-                Triangles equilateralTriangle = new EquilateralTriangle(lengthA, lengthB, lengthC);
-                return equilateralTriangle;
+               return new EquilateralTriangle(lengthA, lengthB, lengthC);
             }
-            //Проверка на разносторонний
-            if (lengthA != lengthB && lengthB != lengthC)
-            {
-
-            }
-;
-
-
-
             //Проверка на равнобедренный
+            if (lengthA == lengthB || lengthA == lengthC || lengthB == lengthC)
+            {
+                return new IsoscelesTriangle(lengthA, lengthB, lengthC);
+            }
+            //Проверка на прямоугольный
             if ((lengthA * lengthA).Equals(lengthB * lengthB + lengthC * lengthC) ||
                 (lengthB * lengthB).Equals(lengthA * lengthA + lengthC * lengthC) ||
                 (lengthC * lengthC).Equals(lengthA * lengthA + lengthB * lengthB))
             {
                 return new RightTriangle(lengthA, lengthB, lengthC);
             }
+            //Проверка на разносторонний
+                if (lengthA != lengthB && lengthB != lengthC)
+            {
+                return new ScaleneTriangle(lengthA, lengthB, lengthC);
+            }
+
+        return new Triangles(lengthA, lengthB, lengthC); 
+            
 
 
                 
