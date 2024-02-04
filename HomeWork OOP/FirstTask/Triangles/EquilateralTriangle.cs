@@ -2,7 +2,7 @@
 
 namespace HomeWork_OOP.FirstTask.Triangles
 {
-    public class EquilateralTriangle : Triangles
+    public class EquilateralTriangle : Triangle
     {
         public EquilateralTriangle(double lengthA, double lengthB, double lengthC) : base(lengthA, lengthB, lengthC)
         {

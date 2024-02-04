@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork_OOP.FirstTask.Triangles
 {
-    public class RightTriangle : Triangles
+    public class RightTriangle : Triangle
     {
         public RightTriangle(double lengthA, double lengthB, double lengthC) : base(lengthA, lengthB, lengthC)
         {

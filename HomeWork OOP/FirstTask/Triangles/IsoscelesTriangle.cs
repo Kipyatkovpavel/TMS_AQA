@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork_OOP.FirstTask.Triangles
 {
-    public class IsoscelesTriangle : Triangles
+    public class IsoscelesTriangle : Triangle
     {
         public IsoscelesTriangle(double lengthA, double lengthB, double lengthC) : base(lengthA, lengthB, lengthC)
         {
@@ -22,7 +22,7 @@ namespace HomeWork_OOP.FirstTask.Triangles
             if (lengthA == lengthB)
             {
                 side = lengthA;
-                footingside = lengthB;
+                footingside = lengthC;
             }
             else if (lengthB == lengthC)
             {
@@ -35,7 +35,7 @@ namespace HomeWork_OOP.FirstTask.Triangles
                 footingside = lengthB;
             }
 
-            double area = (footingside / 4) * Math.Sqrt(4 * Math.Pow(side, 2) - (Math.Pow(footingside, 2)));
+            double area = (footingside / 4) * Math.Sqrt((4 * Math.Pow(side, 2) - (Math.Pow(footingside, 2))));
             return area;
         }
 

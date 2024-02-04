@@ -3,9 +3,9 @@
 
 namespace HomeWork_OOP.FirstTask
 {
-    public  class FigureCreator
+    public static class FigureCreator
     {
-        public Triangles CreateTriangle(double lengthA, double lengthB, double lengthC)
+        public static Triangle CreateTriangle(double lengthA, double lengthB, double lengthC)
         {
             //Проверка на равносторонний
             if (lengthA == lengthB && lengthB == lengthC)
@@ -25,18 +25,25 @@ namespace HomeWork_OOP.FirstTask
                 return new RightTriangle(lengthA, lengthB, lengthC);
             }
             //Проверка на разносторонний
-                if (lengthA != lengthB && lengthB != lengthC)
+            if (lengthA != lengthB && lengthB != lengthC)
             {
                 return new ScaleneTriangle(lengthA, lengthB, lengthC);
             }
+            //Проверка на 0 
+            if (lengthA == 0 || lengthB == 0 || lengthC == 0)
+            {
+                throw new Exception("Сторона не может быть 0");
+            }
+            //Проверка теоремы о 2х сторонах > 3ей
+            if ((lengthB + lengthC) <=  lengthA|| (lengthA + lengthC) <= lengthB || (lengthA + lengthB) <= lengthC)                
+            {
+                throw new Exception("Невозможно построить треугольник с указанынми сторонами.Сумма двух сторон должна быть больше длины третьей стороны ");
+            }
 
-        return new Triangles(lengthA, lengthB, lengthC); 
+        return new Triangle(lengthA, lengthB, lengthC); 
             
 
-
-                
-            
-            
         }
-    }
+
+    }   
 }
