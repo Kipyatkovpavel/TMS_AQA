@@ -8,13 +8,18 @@ namespace Interfaces
 {
     public class StaticExample
     {
-        public static int StaticVaruable = 0;
+        public static int StaticVariable = 0;
         public int InstanceVar;
 
         public StaticExample() 
         {
-            StaticVaruable++;
-            InstanceVar = StaticVaruable;
+            StaticVariable++;
+            InstanceVar = StaticVariable;
+        }
+
+        public static void Print()
+        {
+            Console.WriteLine($"Static Variable: {StaticVariable}");
         }
     }
 }
