@@ -34,13 +34,13 @@ using Collections;
 // new StackExample().Run();
 
 // -==================== Queue<T>
-//new QueueExample().Run();
+new QueueExample().Run();
 
 // -==================== Пример
 //new Example().Run();
 
 // -==================== Equals and GetHashCode
-Person person1 = new Person()
+/*Person person1 = new Person()
 {
     FirstName = "Alex",
     LastName = "Trostyanko"
@@ -69,4 +69,4 @@ IEnumerable<int> GenerateNumbers(int count)
 foreach (var number in GenerateNumbers(5))
 {
     Console.WriteLine(number);
-}
+}*/
