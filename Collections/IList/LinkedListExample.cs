@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class LinkedListExample
+/*public class LinkedListExample
 {
     public void Run()
     {
@@ -58,4 +58,4 @@ public class LinkedListExample
         Console.WriteLine("Элементы в списке:");
         PrintHelper.PrintCollection(linkedList);
     }
-}
+}*/
